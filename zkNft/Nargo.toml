@@ -1,0 +1,7 @@
+[package]
+name = "zkNft"
+type = "bin"
+authors = ["bootnode"]
+compiler_version = ">=0.19.3"
+
+[dependencies]
