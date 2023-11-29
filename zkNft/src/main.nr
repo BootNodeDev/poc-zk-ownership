@@ -1,14 +1,15 @@
-fn main(x: Field, y: pub Field) {
-    assert(x != y);
+fn main(x: [Field; 2], y: [Field; 2], solution: Field) {
+    let det = determinant(x, y);
+    assert(det == solution);
 }
 
-fn determinant(a: [Field; 2], b: [Field; 2]) -> Field {
-    a[0] * b[1] - a[1] * b[0]
+fn determinant(x: [Field; 2], y: [Field; 2]) -> Field {
+    x[0] * y[1] - x[1] * y[0]
 }
 
 #[test]
 fn test_main() {
-    main(1, 2);
+    main([0,1], [1,0], -1);
 
     // Uncomment to make test fail
     // main(1, 1);
